@@ -12,26 +12,16 @@ const ContextList = (props) => {
     });
 
     return (
-        <div className="main">
-            <h2>
+        <div className="row">
+            <h2 className="text-center">
                 Context List
-                <Link to="/addContext">
-                    <button className="ui button blue right">Add Context</button>
-                </Link>
             </h2>
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Language</th>
-                        <th scope="col">letterFrequencies</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {renderContextList}
-                </tbody>
-            </table>
+            <div className="d-grid gap-2 d-md-flex justify-content-md-end">
+            <Link to="/addContext">
+                    <button type="button" className="btn btn-primary me-md-2">Add Context</button>
+            </Link>
+            </div>
+            {renderContextList}     
         </div>
     );
 };
